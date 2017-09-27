@@ -13,10 +13,6 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname, '../public/survey.html'));
 	});
 
-	app.get('/api/swolemates', function(req, res) {
-		return res.json(swolemates);
-	});
-
 	app.use(function(req, res){
 		res.sendFile(path.join(__dirname, '../public/home.html'));
 
