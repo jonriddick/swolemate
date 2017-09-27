@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+     <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!--<link rel="icon" href="data:;base64,iVBORw0KGgo=">-->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+
+<body>
+    <div class="navbar-fixed ">
+        <nav class="grey lighten-2">
+            <div class="nav-wrapper row">
+                <form class="col s5 m3 l3">
+                    <div class="grey lighten-2 black-text input-field">
+                        <!-- <input type="text" name="zipcode" id="zip"><label>Enter your Zipcode</label> -->
+                    </div>
+                </form>
+                <!-- <ul class="left "> -->
+                    <!-- <li><a class="btn waves-effect waves-light z-depth-1" type="submit" id="search">Search</a></li> -->
+                <!-- </ul> -->
+                <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+                <!-- <ul class="right hide-on-med-and-down"> -->
+                    <!-- <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Get Updates!</a></li> -->
+                    <!-- <li><a class="waves-effect waves-light btn modal-trigger" href="#modal2">Breed Info</a></li> -->
+                    <!-- <li><a class="waves-effect waves-light btn modal-trigger" href="#modal3">Chat</a></li> -->
+                    <!--this is the button to remove results and it is commented out-->
+                    <!--<li><a class="btn waves-effect waves-light z-depth-1" type="submit" id="rmSearch">Remove</a></li>-->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- <ul class="side-nav" id="mobile-demo"> -->
+<!--         <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Get Updates!</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal2">Breed Info</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal3">Chat</a></li> -->
+         
+         <!--this is the button to remove results and it is commented out-->
+        <!--<li><a class="btn waves-effect waves-light z-depth-1" type="submit" id="rmSearch">Remove</a></li>-->
+    <!-- </ul> -->
+    <div class="red darken-4 black-text center">
+        <!-- <img class="responsive-img center hide-on-med-and-up" src="assets/images/pawlogo.png" alt=""> -->
+        <h1 class="hide-on-small-only">Swolemate Finder</h1>
+    </div>
+    <div class="container col s12 m12 l12" id="main">
+        <div id="thisOne" class="z-depth-5 flow-text">
+            <div id="swolemateIntro">
+
+                <!-- <img class="responsive-img left" src="assets/images/pawsm.png" alt=""> -->
+                <p class="flow-text center">
+                    Answer a few simple questions<br>
+                    to find the Swolemate of your dreams!
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+
+         <!-- Modal Structure error -->
+  <div id="modal4" class="modal">
+    <div class="modal-content center-align">
+      <h3 class="red-text">Error</h3>
+      <h5 class="red-text">Please enter a valid Zip Code</h5>
+      <iframe src="https://giphy.com/embed/3rLIKEpU5nDzi" width="360" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/funny-fail-dog-3rLIKEpU5nDzi">via GIPHY</a></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+
+    <!--This is the video modal-->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="container" id="main">
+                <div class="flow-text">
+                    <div class="input-field col s12">
+                        <select id="breedNames">
+      				<option value="" disabled selected class="breedChoice">Breed Choice</option>
+      			</select>
+                        <label>Learn About the Breed</label>
+                    </div>
+                    <div class="container" id="breedVideos">
+                    </div>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div class="container col s12 m12 l12" id="main">
+        <ul class="center">
+            <li id="moreButton"></li>
+        </ul>
+    </div>
+    
+    <!-- Modal Structure  for the email-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h5><i class="material-icons prefix">pets</i> Get Pup Alerts</h5>
+            <form class="col s6 m3 l3">
+                <div class="grey lighten-2 black-text input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" name="zipcode" id="userName"><label>Enter your name</label>
+                </div>
+                <div class="grey lighten-2 black-text input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input type="email" name="zipcode" id="email" class="validate"><label>Enter your email</label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="subscribe">Subscribe</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
+        </div>
+    </div>
+    <!--The chat modal will go here-->
+      <div id="modal3" class="modal">
+    <div class="modal-content">
+                 <div class="jumbotron">
+      <h3 class="text-center">Pup Adoption Chat!</h3>
+    </div>
+    <div class="row">
+
+      <!-- Sign-Up Panel-->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Your thoughts...</h4>
+          </div>
+          <div class="panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group">
+                <label for="username-input">User Name:</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="comment-input">Comment</label>
+                <textarea class="form-control" id="comment-input" rows="5"></textarea>
+              </div>
+              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Most Recent Member Panel -->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Comments</h4>
+          </div>
+          <div class="panel-body" id="recent-member">
+            <h6 id="name-display"></h6>
+            <p id="comment-display"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+
+    </div>
+  </div>
+    <footer class="page-footer red darken-4 black-text">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="black-text">Swolemate Finder Motto:</h5>
+                    <p class="black-text text-lighten-4 flow-text">Never cheat on your swolemate! You're only cheating yourself!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Links:</h5>
+                    <ul>
+                        <li><a class="black-text text-lighten-3" href="https://github.com/jonriddick" target="_blank">API Swolemate List </a></li>
+                        <li><a class="black-text text-lighten-3" href="https://github.com/jonriddick" target="_blank">Github Repo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container black-text">
+                © 2017 Copyright SwolemateFinder.com
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <!--<script src="assets/js/chat.js"></script>-->
+</body>
+
+</html>

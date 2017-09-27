@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>FriendFinder</title>
+	<title>Swolemates For Life</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -34,11 +34,11 @@
 		<h4>Link to Photo Image (Required)</h4>
 		<input type="text" name="" id="photo" class="form-control" required >
 
-		<h4>Location (Required)</h4>
+		<!-- <h4>Location (Required)</h4>
 		<input type="text" name="" id="location" class="form-control" required >
 
 		<h4>Email (Required)</h4>
-		<input type="email" name="" id="contact" class="form-control" required >
+		<input type="email" name="" id="contact" class="form-control" required > -->
 
 		<hr>
 
@@ -167,7 +167,7 @@
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jonriddick/swolemate">GitHub Repo</a></p>
+		        <p><a href="/api/swolemates">API Friends List</a> | <a href="https://github.com/jonriddick/swolemate">GitHub Repo</a></p>
 	      </div>
 	    </footer>
 
@@ -181,11 +181,11 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	        <h2 class="modal-title"><strong>Here's your Swolemate</strong></h2>
 	      </div>
 	      <div class="modal-body">
-	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	        <h2 id="matchName">Default Name</h2>
+	        <img id="matchImg" src="" alt="No Photo Available" width= 250px> 
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -243,7 +243,7 @@
 	    	var currentURL = window.location.origin;
 
 	    	// AJAX post the data to the friends API. 
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + "/api/swolemates", userData, function(data){
 
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
