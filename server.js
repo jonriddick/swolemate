@@ -18,43 +18,6 @@ require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 
 
-
-// ***************************************************
-// This code is now in the htmlRoutes.js
-//
-
-// app.get('/', function(req,res) {
-// 	res.sendFile(path.join(__dirname, 'app/public/home.html'));
-// });
-
-// app.get('/survey', function(req, res) {
-// 	res.sendFile(path.join(__dirname, 'app/public/survey.html'));
-// });
-//***************************************************
-
-
-
-
-
-
-// ***************************************************
-// This code is now in the apiRoutes.js
-//
-// app.get('/api/swolemates', function(req, res) {
-	
-// 	return res.json(customers);
-// });
-
-// app.post('/api/new', function(req, res) {
-// 	console.log('Works');
-// 	var newSwolemate = req.body;
-	
-// 	swolemates.push(newSwolemate);
-	
-// 	res.json(newSwolemate);
-// });
-//***************************************************
-
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });

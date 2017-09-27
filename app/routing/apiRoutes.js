@@ -14,13 +14,13 @@ module.exports = function(app){
 	});
 
 	app.post('/api/swolemates', function(req, res) {
-		// grabs new data from survey scores to compare with friendList array (body comes from page)
+		// grabs new data from survey scores to compare with swolemates array (body comes from page)
 		var newSurveyScores = req.body.scores;
 		var scoresArray = [];
 		var friendCount = 0;
 		var closestMatch = 0;
 
-		// loop through friendList array
+		// loop through swolemates array
 		for (var i = 0; i < swolemates.length; i++) {
 			var scoresDiff = 0;
 			// loop through scores to compare friends
@@ -32,7 +32,7 @@ module.exports = function(app){
 				scoresArray.push(scoresDiff);
 			}
 
-			// after friends are compared find the closest match
+			// after swolemates are compared find the closest match
 			for (var i = 0; i<scoresArray.length;i++) {
 				if(scoresArray[i] <= scoresArray[closestMatch]){
 					closestMatch = i;
@@ -40,52 +40,10 @@ module.exports = function(app){
 			}
 
 			// return closest match data
-			var disneyFriend = swolemates[closestMatch];
-			res.json(disneyFriend);
+			var swolemate = swolemates[closestMatch];
+			res.json(swolemate);
 
-			// push new survey submission into friendList array
+			// push new survey submission into swolemates array
 			swolemates.push(req.body);
 		});
 	};
-
-
-	// app.post('/api/swolemates', function(req, res) {
-	
-	// 	var swolemateMatch = {
-	// 		name: "",
-	// 		photo: "",
-	// 		matchDifference: 1000
-	// 	};
-
-	// 	var userData = req.body;
-
-	// 	var userName = userData.name;
-	// 	var userPhoto = userData.photo
-	// 	var userScores = userData.scores;
-
-	// 	var difference = 0;
-
-	// 	for(var i = 0; i <[swolemates].length-1; i++){
-	// 		console.log(swolemates[i].name);
-	// 		difference = 0;
-
-	// 		for(var x = 0; x < 10; x++){
-	// 			difference += Math.abs(parseInt(userScores[x]) - parseInt(swolemates[i].scores[x]));
-	// 			if (difference <= swolemateMatch.matchDifference){
-	// 				swolemateMatch.name = swolemates[i].name;
-	// 				swolemateMatch.photo = swolemates[i].photo
-	// 				swolemateMatch.matchDifference = difference;
-	// 			}
-	// 		}
-
-
-	// 	}
-
-	// 	swolemates.push(userData);
-	// 	res.json(swolemateMatch);
-	// });
-//};
-
-
-
-

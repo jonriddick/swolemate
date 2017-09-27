@@ -1,7 +1,7 @@
 {
   "name": "swolemate",
   "version": "1.0.0",
-  "description": "swolemate app",
+  "description": "Find a new swolemate to help you stay motivated in the gym!",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
