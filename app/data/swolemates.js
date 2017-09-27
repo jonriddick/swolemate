@@ -1,110 +1,8 @@
 var swolemates = [
-  {
-  "name":"Haley",
-  "photo":"https://skirtday.files.wordpress.com/2012/11/1210606452243-gym-chick.jpg?w=320",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     5,
-     1,
-     2,
-     5,
-     2,
-     1
-      ]
-  },
-  {
-  "name":"Cewek",
-  "photo":"https://pbs.twimg.com/profile_images/658555818879528960/cvf9rezJ_400x400.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     4,
-     2,
-     3,
-     4,
-     2,
-     1,
-     2,
-     1,
-     4,
-     4
-      ]
-},
-{
-  "name":"Lukas",
-  "photo":"https://i.imgur.com/vBJMI9s.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     4,
-     1,
-     4,
-     4,
-     5,
-     1,
-     2,
-     5,
-     4,
-     1
-      ]
-},
-{
-  "name":"Mandy",
-  "photo":"https://i.pinimg.com/736x/fa/11/ab/fa11ab4a3a900ba4eafeb093d928ff86--dolphins-cheerleaders-dallas-cowboy-cheerleaders.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     2,
-     2,
-     3,
-     2,
-     1,
-     4
-      ]
-},
-{
-  "name":"Jon",
-  "photo":"http://www.hdtvsolutions.com/images/articles/MadMen_JH2.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     2,
-     5,
-     3,
-     4,
-     5,
-     5
-      ]
-},
-{
-  "name":"Todd",
-  "photo":"http://www.suave.com/Images/2072/2072-665335-Category%20Hero%20Images_Mens.png",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     2,
-     3,
-     3,
-     2,
-     4,
-     2
-      ]
-},
 {
   "name":"Magdelena",
-  "photo":"http://www.rippedmass.org/forums/attachments/members-pictures/1304d1414763129-hot-chick-gym-beautiful-girl-working-out.jpeg",
-  "twitter":"https://twitter.com",
+  "photo":"https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/21909354_290213811460762_1241517862355468288_n.jpg",
+  "twitter":"https://www.instagram.com/madzkaomi/",
   "scores":[
      5,
      1,
@@ -119,9 +17,9 @@ var swolemates = [
       ]
 },
 {
-  "name":"Collin",
-  "photo":"https://image.afcdn.com/story/20140611/hot-guy-at-the-gym-258092_origin.jpg",
-  "twitter":"https://twitter.com",
+  "name":"Joey Swoll",
+  "photo":"https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/21980355_1525124720867864_5672963679830671360_n.jpg",
+  "twitter":"https://www.instagram.com/joeyswoll/",
   "scores":[
      5,
      1,
@@ -133,40 +31,6 @@ var swolemates = [
      4,
      1,
      4
-      ]
-},
-{
-  "name":"Will",
-  "photo":"https://www.360nobs.com/wp-content/uploads/2016/01/man.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     2,
-     6,
-     3,
-     4,
-     3,
-     1
-      ]
-},
-{
-  "name":"Pasquale",
-  "photo":"https://www.unilad.co.uk/wp-content/uploads/2017/03/961-10978677_10203735284326357_2632385941701358901_n.jpg",
-  "twitter":"https://twitter.com",
-  "scores":[
-     5,
-     1,
-     4,
-     3,
-     2,
-     6,
-     3,
-     2,
-     4,
-     1
       ]
 }
 ]
